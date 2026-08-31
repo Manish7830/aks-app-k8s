@@ -6,24 +6,22 @@ metadata:
 
 spec:
   ingressClassName: nginx
+
   rules:
     - http:
         paths:
           - path: /api
             pathType: Prefix
-
             backend:
               service:
-                name: ask-app-backend
+                name: aks-app-backend
                 port:
                   number: 8000
 
           - path: /
             pathType: Prefix
-
             backend:
               service:
-                name: ask-app-frontend
+                name: aks-app-frontend
                 port:
                   number: 80
-                  
