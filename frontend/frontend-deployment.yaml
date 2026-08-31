@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: ghcr.io/manish7830/aks-app-frontend:v5
+          image: ghcr.io/manish7830/aks-app-frontend:v6
           imagePullPolicy: Always
 
           ports:
