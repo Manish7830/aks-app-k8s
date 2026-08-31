@@ -29,6 +29,7 @@ spec:
             requests:
               cpu: "100m"
               memory: "128Mi"
+
             limits:
               cpu: "500m"
               memory: "512Mi"
@@ -39,6 +40,8 @@ spec:
               port: 8000
             initialDelaySeconds: 10
             periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
 
           livenessProbe:
             httpGet:
@@ -46,3 +49,5 @@ spec:
               port: 8000
             initialDelaySeconds: 20
             periodSeconds: 20
+            timeoutSeconds: 5
+            failureThreshold: 3
